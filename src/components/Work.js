@@ -1,10 +1,48 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
+import Img1 from "../assets/portfolio-img1.png";
+import Img2 from "../assets/portfolio-img2.png";
+import Img3 from "../assets/portfolio-img3.png";
 
 const Work = () => {
   return (
-    <div className="section" id="work">
-      Work
-    </div>
+    <section className="section lg:mt-44" id="work">
+      <div className="container mx-auto">
+        <div>
+          <div className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0">
+            {/* text */}
+            <div>
+              <h2 className="h2 leading-tight text-accent">
+                My Latest <br />
+                Work.
+              </h2>
+              <p className="max-w-sm mb-16">
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+              </p>
+              <button className="btn btn-sm">View All projects</button>
+            </div>
+            {/* img */}
+            <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
+              <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300 "></div>
+              <img
+                src={Img1}
+                alt=""
+                className="group-hover:scale-125 transition-all duration-500"
+              />
+              <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-60 ">
+                <span className="">UX/UI Design</span>
+              </div>
+              <div className="">
+                <span className="">Project Title</span>
+              </div>
+            </div>
+          </div>
+          <div>2</div>
+        </div>
+      </div>
+    </section>
   );
 };
 
